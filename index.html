@@ -28,12 +28,99 @@
 
 			.flex-container {
 				display: flex;
-				font-size: 6vw;
+				font-size: 6em;
 				font-weight:200;
 				letter-spacing: -2px;
 				padding-top: 35vh;
 				align-items: center;
 				justify-content: center;
+				background: -webkit-radial-gradient(#eee, black);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.material-symbols-outlined {font-size: 1.25em; letter-spacing: -.05em;}
+			.tagarea {
+				color: #444;
+				font-size: 23;
+				font-weight: 300;
+				text-align: center;
+				/* text-shadow: 1px 1px 2px #101010; */
+			}
+			svg {
+				position: relative;
+				top:20px;
+				filter: drop-shadow(1px 1px 2px #191919);
+			}
+			line {
+				stroke: #444;
+				stroke-width: 1.25;
+				
+			}
+			.contact {margin-top: 1cm; font-size: 1em;}
+			.phone {position: relative; top: .7vh;}
+			a:link {
+				color: white;
+				cursor: default; 
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				
+				/* 1. Define the transition on the BASE state */
+				transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+			}
+			a:visited {color: white;}
+			a:hover {
+				cursor: default; 
+				color: lightslategrey;
+				border-bottom: 1px solid lightslategrey;
+			}
+			
+			footer {
+				color: silver;
+				bottom: 0;
+				padding: 5mm;
+				font-size: .75em;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<span class="material-symbols-outlined">rainy_light</span>Watterscapıta/
+		</div>
+	
+		<div class='tagarea'>
+			los angeles&nbsp;
+			<svg height="40" width="15">
+				<line x1="15" y1="0" x2="0" y2="40" />
+			</svg>
+			&nbsp;san francisco
+		</div>
+		
+		<div class="contact">
+			<a href="tel: +1 (510) 239-7503" title="(510) 239-7503" class="phone">
+					<span class="material-symbols-outlined">call</span>
+			</a>
+			 &ensp; 
+			 <a href="https://www.linkedin.com/company/watters-capital" title="@watterscapital" target="_blank">in</a>
+			 &ensp;
+			 <a href="mailto:list@://watterscapital.com" title="Newsletter">𝒲</a>
+			 &ensp;
+			 <a href="https://www.facebook.com/watterscapital" title="@watterscapital" target="_blank">f</a>
+		</div>
+		
+		<footer>Watterscapital, Inc. &copy; 2026</footer>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
 				background: -webkit-radial-gradient(#eee, black);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
