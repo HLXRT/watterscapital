@@ -1,38 +1,113 @@
-<title>Watters Capital</title>
-<head>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-</head>
-<div align='center'>
-	<img src='logo.png' style='pointer-events: none;'></img>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Watterscapital</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0&icon_names=rainy_light,call" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+			html, body {
+				cursor: default;
+				overscroll-behavior: none;
+				margin: 0; /* prevents unwanted scroll bars */
+				padding: 0; /* prevents unwanted scroll bars */
+			}
+			body {
+				color: white;
+				text-align: center;
+				font-family: Mulish;
+				min-height: 100vh;
+				background: linear-gradient(#212121, #424242);
+				background-repeat: no-repeat;
+				-webkit-user-select: none; /* Safari */
+				-ms-user-select: none;     /* IE 10 and IE 11 */
+				user-select: none;         /* Standard syntax */
+			}
 
-<div style='padding:12%; background:linear-gradient(white,#A8CEFF,#f1f9f9); text-align:center; color:white; font-family:Avenir; text-shadow:2px 1px 2px #A1C3FA; font-size:23; cursor:default'>
-Commercial Finance &nbsp;
-<svg height="50" width="11" style='position:relative; top:20'>
-  <line x1="0" y1="0" x2="0" y2="50" style="stroke:white;stroke-width:3" />
-</svg>
-Mergers & Aquisitions
-</div>
-
-<div align='center' style='background:linear-gradient(#f9f9f9, white); padding:50;'><a href='https://l3funding.com'><img src='L3_logo.png'></a><section style='font-family:Arial; font-size:25; color:#AB1F71; text-shadow:2px 1px 2px lightgray; cursor:default;'>L3 Funding</section></div>
-
-<br><br>
-<div align='center'><img src='ck_logo.png'></div>
-
-<br><br>
-<br><br>
-
-<div align='center' style='background:linear-gradient(#f9f9f9, white); padding:50;'><img src='pan.png'></div>
-
-<div align='center' style='padding:150 0 50 0'><img src='peco0.png'></div>
-
-
-<div align='center' style='background:linear-gradient(#f9f9f9, white); padding:0 0 0 30; margin-top:10'><img src='chase_logo.png'></div>
-
-<div align='center' style='transform:translate(0,-70px)'><img src='Palantir.png'></div>
-
-<div align='center' style='background:linear-gradient(#f9f9f9, white); padding:50'><img src='Renaissance_Technologies.png'></div>
-
-<div align='center' style='margin-top:200'><img src='Ark_Invest.png'></div>
-
-<div style='font-family:avenir; font-size:13; color:gray; padding-top:10;'>Watters Capital, Inc. &copy; 2024</div>
+			.flex-container {
+				display: flex;
+				font-size: 6vw;
+				font-weight:200;
+				letter-spacing: -2px;
+				padding-top: 35vh;
+				align-items: center;
+				justify-content: center;
+				background: -webkit-radial-gradient(#eee, black);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.material-symbols-outlined {font-size: 1.25em; letter-spacing: -.05em;}
+			.tagarea {
+				color: #444;
+				font-size: .9em;
+				font-weight: 300;
+				text-align: center;
+				/* text-shadow: 1px 1px 2px #101010; */
+			}
+			svg {
+				position: relative;
+				top:20px;
+				filter: drop-shadow(1px 1px 2px #191919);
+			}
+			line {
+				stroke: #444;
+				stroke-width: 1.25;
+				
+			}
+			.contact {margin-top: 1cm; font-size: 1em;}
+			.phone {position: relative; top: .7vh;}
+			a:link {
+				color: white;
+				cursor: default; 
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				
+				/* 1. Define the transition on the BASE state */
+				transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+			}
+			a:visited {color: white;}
+			a:hover {
+				cursor: default; 
+				color: lightslategrey;
+				border-bottom: 1px solid lightslategrey;
+			}
+			
+			footer {
+				color: silver;
+				bottom: 0;
+				padding: 5mm;
+				font-size: .75em;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<span class="material-symbols-outlined">rainy_light</span>Watterscapıta/
+		</div>
+	
+		<div class='tagarea'>
+			los angeles&nbsp;
+			<svg height="40" width="15">
+				<line x1="15" y1="0" x2="0" y2="40" />
+			</svg>
+			&nbsp;san francisco
+		</div>
+		
+		<div class="contact">
+			<a href="tel: +1 (510) 239-7503" title="(510) 239-7503" class="phone">
+					<span class="material-symbols-outlined">call</span>
+			</a>
+			 &ensp; 
+			 <a href="https://www.linkedin.com/company/watters-capital" title="@watterscapital" target="_blank">in</a>
+			 &ensp;
+			 <a href="mailto:list@://watterscapital.com" title="Newsletter">𝒲</a>
+			 &ensp;
+			 <a href="https://www.facebook.com/watterscapital" title="@watterscapital" target="_blank">f</a>
+		</div>
+		
+		<footer>Watterscapital, Inc. &copy; 2026</footer>
+	</body>
+</html>
