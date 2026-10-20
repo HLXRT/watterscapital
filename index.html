@@ -9,43 +9,61 @@
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 			@import url('https://fonts.cdnfonts.com/css/latin-modern-math');
+			/*  Reset: remove default margins and padding */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			/* html and body span the full document height */
 			html, body {
+				color: white;
+				width: 100%;
+				height: 100%;
 				cursor: default;
+				text-align: center;
+				font-family: Mulish;
 				overscroll-behavior: none;
 				margin: 0; /* prevents unwanted scroll bars */
 				padding: 0; /* prevents unwanted scroll bars */
-			}
-			body {
-				color: white;
-				text-align: center;
-				font-family: Mulish;
-				min-height: 100vh;
-				background: linear-gradient(#212121, #424242);
-				background-repeat: no-repeat;
+				
 				-webkit-user-select: none; /* Safari */
 				-ms-user-select: none;     /* IE 10 and IE 11 */
 				user-select: none;         /* Standard syntax */
+				
+				background: linear-gradient(#212121, #424242);
 			}
 
-			.flex-container {
+			/* Main wrapper spans 100% width, full viewport height */
+			.full-screen-container {
+				width: 100%;
+				height: 100vh; /* 100% viewport height */
 				display: flex;
-				font-size: 6vw;
-				font-weight:200;
-				letter-spacing: -.25vw;
-				padding-top: 35vh;
 				align-items: center;
 				justify-content: center;
-				background: -webkit-radial-gradient(#eee, black);
+			}
+
+			.watterscapitallogo {
+				display: flex;
+				font-size: 6vw;
+				font-weight: 200;
+				letter-spacing: -.2vw;
+				padding: 5mm;
+				/* position: absolute; */
+				/* top:35vh; */
+				background: -webkit-radial-gradient(#D6D6D6, #212121);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
 			.material-symbols-outlined {font-size: 1.25em; letter-spacing: -.05em;}
+			
 			.tagarea {
 				color: #444;
 				font-size: .9em;
 				font-weight: 300;
-				text-align: center;
-				/* text-shadow: 1px 1px 2px #101010; */
+				position: absolute;
+				margin-top: 3.5cm;
 			}
 			svg {
 				position: relative;
@@ -57,7 +75,11 @@
 				stroke-width: 1.25;
 				
 			}
-			.contact {margin-top: 1cm; font-size: 1em;}
+			.contact {
+				position: absolute;
+				margin-top: 7.25cm;
+				font-size: 1em;
+			}
 			.phone {position: relative; top: .7vh;}
 			.FB {position: relative; top: .14vh; padding: 0 .9mm 0 .9mm}
 			.psivr {font-family: latin modern math; font-size: larger; padding: 0 0 1mm .75mm;}
@@ -79,39 +101,42 @@
 			
 			footer {
 				color: silver;
-				bottom: 0;
 				padding: 5mm;
 				font-size: .75em;
 				position: absolute;
+				bottom: 0;
+				left: 0;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="flex-container">
-			<span class="material-symbols-outlined">rainy_light</span>Watterscapıta&VeryThinSpace;/
-		</div>
-	
-		<div class='tagarea'>
-			los angeles&nbsp;
-			<svg height="40" width="15">
-				<line x1="15" y1="0" x2="0" y2="40" />
-			</svg>
-			&nbsp;san francisco
-		</div>
+		<div class="full-screen-container">
+			<div class="watterscapitallogo">
+				<span class="material-symbols-outlined">rainy_light</span>Watterscapıta&VeryThinSpace;/
+			</div>
 		
-		<div class="contact">
-			<a href="tel: +1 (510) 239-7503" title="(510) 239-7503" class="phone">
-					<span class="material-symbols-outlined">call</span>
-			</a>
-			 &ensp; 
-			 <a href="https://www.linkedin.com/company/watterscapital" title="@watterscapital" target="_blank">in</a>
-			 &ensp;
-			 <!-- <a href="mailto:list@://watterscapital.com." title="Newsletter">𝒲</a> -->
-			  <a href="mailto:list@://watterscapital.com" title="psıvr" class="psivr">𝜓</a>
-			 &ensp;
-			 <a href="https://www.facebook.com/watterscapital" title="@watterscapital" target="_blank" class="FB">f</a>
+			<div class='tagarea'>
+				los angeles&nbsp;
+				<svg height="40" width="15">
+					<line x1="15" y1="0" x2="0" y2="40" />
+				</svg>
+				&nbsp;san francisco
+			</div>
+			
+			<div class="contact">
+				<a href="tel: +1 (510) 239-7503" title="(510) 239-7503" class="phone">
+						<span class="material-symbols-outlined">call</span>
+				</a>
+				 &ensp; 
+				 <a href="https://www.linkedin.com/company/watterscapital" title="@watterscapital" target="_blank">in</a>
+				 &ensp;
+				 <!-- <a href="mailto:list@://watterscapital.com." title="Newsletter">𝒲</a> -->
+				  <a href="mailto:list@://watterscapital.com" title="psıvr" class="psivr">𝜓</a>
+				 &ensp;
+				 <a href="https://www.facebook.com/watterscapital" title="@watterscapital" target="_blank" class="FB">f</a>
+			</div>
+			
+			<footer>Watterscapital, Inc. &copy; 2026</footer>
 		</div>
-		
-		<footer>Watterscapital, Inc. &copy; 2026</footer>
 	</body>
 </html>
