@@ -4,29 +4,31 @@
 		<meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Watterscapital</title>
-		<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0&icon_names=rainy_light,call" />
 		<style>
+			/* Fonts */
 			@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 			@import url('https://fonts.cdnfonts.com/css/latin-modern-math');
-			/*  Reset: remove default margins and padding */
+			
+			/* Reset: remove default margins and padding */
 			* {
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
 			}
 			
-			/* html and body span the full document height */
+			/* html and body span the full document dimensions */
 			html, body {
 				color: white;
 				width: 100%;
 				height: 100%;
+				min-height: 100vh;
+				min-height: 100dvh;
 				cursor: default;
 				text-align: center;
-				font-family: Mulish;
+				font-family: Mulish, sans-serif;
 				overscroll-behavior: none;
-				margin: 0; /* prevents unwanted scroll bars */
-				padding: 0; /* prevents unwanted scroll bars */
 				
 				-webkit-user-select: none; /* Safari */
 				-ms-user-select: none;     /* IE 10 and IE 11 */
@@ -35,64 +37,75 @@
 				background: linear-gradient(#212121, #424242);
 			}
 
-			/* Main wrapper spans 100% width, full viewport height */
+			/* Main wrapper spans full width and dynamic viewport height */
 			.full-screen-container {
 				width: 100%;
-				height: 100vh; /* 100% viewport height */
+				min-height: 100vh;
+				min-height: 100dvh;
 				display: flex;
+				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				position: relative;
+				padding: 2rem 1rem;
 			}
 
 			.watterscapitallogo {
 				display: flex;
-				font-size: 6vw;
+				align-items: center;
+				justify-content: center;
+				font-size: clamp(2rem, 7vw, 4.5rem);
 				font-weight: 200;
-				letter-spacing: -.3vw;
-				/* padding: 5mm; */
-				/* position: absolute; */
-				/* top:35vh; */
+				letter-spacing: -.2vw;
+				margin-bottom: 1.25rem;
 				background: -webkit-radial-gradient(#D6D6D6, #212121);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
-			.material-symbols-outlined {font-size: 1.25em; letter-spacing: -.05em;}
+			
+			.material-symbols-outlined {
+				font-size: 1.25em; 
+				letter-spacing: -.05em;
+			}
 			
 			.tagarea {
 				color: #444;
-				font-size: .9em;
+				font-size: clamp(0.8rem, 2.5vw, 0.95rem);
 				font-weight: 300;
-				position: absolute;
-				margin-top: 3.5cm;
+				margin-bottom: 2rem;
+				display: flex;
+				align-items: center;
 			}
+			
 			svg {
 				position: relative;
-				top:20px;
+				top: 2px;
 				filter: drop-shadow(1px 1px 2px #191919);
 			}
+			
 			line {
 				stroke: #444;
 				stroke-width: 1.25;
-				
 			}
+			
 			.contact {
-				position: absolute;
-				margin-top: 7.25cm;
-				font-size: 1em;
+				font-size: 1rem;
+				display: flex;
+				align-items: center;
 			}
-			.phone {position: relative; top: .7vh;}
-			.FB {position: relative; top: .14vh; padding: 0 .9mm 0 .9mm}
-			.psivr {font-family: latin modern math; font-size: larger; padding: 0 0 1mm .75mm;}
+			
+			.phone { position: relative; top: .2vh; }
+			.FB { position: relative; top: .14vh; padding: 0 .9mm 0 .9mm; }
+			.psivr { font-family: 'latin modern math', serif; font-size: larger; padding: 0 0 1mm .75mm; }
+			
 			a:link {
 				color: white;
 				cursor: default; 
 				text-decoration: none;
 				border-bottom: 1px solid transparent;
-				
-				/* 1. Define the transition on the BASE state */
 				transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 			}
-			a:visited {color: white;}
+			a:visited { color: white; }
 			a:hover {
 				cursor: default; 
 				color: lightslategrey;
@@ -101,37 +114,37 @@
 			
 			footer {
 				color: silver;
-				padding: 5mm;
+				padding: 1rem;
 				font-size: .75em;
 				position: absolute;
 				bottom: 0;
 				left: 0;
+				width: 100%;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="full-screen-container">
 			<div class="watterscapitallogo">
-				<span class="material-symbols-outlined">rainy_light</span>Watterscapıta&VeryThinSpace;/
+				<span class="material-symbols-outlined">rainy_light</span>Watterscapıta/
 			</div>
 		
-			<div class='tagarea'>
+			<div class="tagarea">
 				los angeles&nbsp;
-				<svg height="40" width="15">
-					<line x1="15" y1="0" x2="0" y2="40" />
+				<svg height="30" width="12">
+					<line x1="12" y1="0" x2="0" y2="30" />
 				</svg>
 				&nbsp;san francisco
 			</div>
 			
 			<div class="contact">
-				<a href="tel: +1 (510) 239-7503" title="(510) 239-7503" class="phone">
-						<span class="material-symbols-outlined">call</span>
+				<a href="tel:+15102397503" title="(510) 239-7503" class="phone">
+					<span class="material-symbols-outlined">call</span>
 				</a>
 				 &ensp; 
-				 <a href="https://www.linkedin.com/company/watterscapital" title="@watterscapital" target="_blank">in</a>
+				 <a href="https://www.linkedin.com/company/watters-capital" title="@watterscapital" target="_blank">in</a>
 				 &ensp;
-				 <!-- <a href="mailto:list@://watterscapital.com." title="Newsletter">𝒲</a> -->
-				  <a href="mailto:list@://watterscapital.com" title="psıvr" class="psivr">𝜓</a>
+				 <a href="mailto:list@watterscapital.com" title="psıvr" class="psivr">𝜓</a>
 				 &ensp;
 				 <a href="https://www.facebook.com/watterscapital" title="@watterscapital" target="_blank" class="FB">f</a>
 			</div>
