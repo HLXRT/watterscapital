@@ -31,7 +31,7 @@ html, body {
 /* Main wrapper spans 100% width, full viewport height */
 .full-screen-container {
 	width: 100%;
-	height: 100vh; /* 100% viewport height */
+	height: 100svh; /* 100% viewport height */
 	display: grid;
 	align-items: center;
 	justify-content: center;
