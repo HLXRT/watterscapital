@@ -20,6 +20,11 @@ html, body {
 	overscroll-behavior: none;
 	margin: 0; /* prevents unwanted scroll bars */
 	padding: 0; /* prevents unwanted scroll bars */
+		
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 	
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none;     /* IE 10 and IE 11 */
@@ -30,21 +35,19 @@ html, body {
 
 /* Main wrapper spans 100% width, full viewport height */
 .full-screen-container {
-	width: 100%;
-	height: 100svh; /* 100% viewport height */
-	display: grid;
-	align-items: center;
+	width: 100vw;
+	height: 100svh; /* Perfect fit for mobile Safari toolbars */
+	display: flex;
+	/*align-items: center;*/
+	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 }
 header {
-	position: relative;
-	top: 20vh;
 	font-size: 8vw;
 	font-weight: 200;
 	letter-spacing: -.3vw;
-	padding: 5mm;
-	/* position: absolute; */
-	/* top:35vh; */
+	padding: 1.55mm;
 	background: -webkit-radial-gradient(#D6D6D6, #212121);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -53,28 +56,30 @@ h3 {
 	color: #444;
 	font-size: 1.7vw;
 	font-weight: 300;
-	position: relative;
-	top: -4vh;
 }
-main {position: relative; top: -20vh;}
+/* main {position: relative; top: -20vh;} */
 button {
 	opacity: .5;
 	color: #111111;
 	width: 10vw;
 	padding: 1vw;
-	margin: .5vw;
+	margin: 4vw .5vw;
 	font-size: .76vw;
 	border-radius: 5px;
 	border: 1px solid transparent;
-	filter: drop-shadow(5px 5px 14px #262626);
+	filter: drop-shadow(5px 5px 14px #151515);
 	
 	/* 1. Define the transition on the BASE state */
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	transition: filter 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 button:hover {
-	opacity: 90%;
+	opacity: .75;
 	color: #222222;
 	background-color: white;
+	filter: drop-shadow(5px 5px 14px #121212);
+	will-change: filter; /* Tells the browser to optimize for filter changes */
+	/* OR use a 3D transform hack if will-change doesn't work: */
+	transform: translateZ(0);
 }
 button:active {outline: 2px auto -webkit-focus-ring-color;}
 
