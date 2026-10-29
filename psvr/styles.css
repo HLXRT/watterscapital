@@ -59,6 +59,7 @@ h3 {
 main {position: relative; top: -20vh;}
 button {
 	opacity: .5;
+	color: #111111;
 	width: 10vw;
 	padding: 1vw;
 	margin: .5vw;
@@ -68,9 +69,10 @@ button {
 	filter: drop-shadow(5px 5px 14px #262626);
 	
 	/* 1. Define the transition on the BASE state */
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 button:hover {
+	opacity: 90%;
 	color: #222222;
 	background-color: white;
 }
